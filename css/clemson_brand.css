@@ -1,0 +1,199 @@
+/* #Font-Face
+================================================ */
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+	
+/* Icons */
+@font-face {
+	font-family: 'clemson-icons';
+	src:url('../fonts/clemson-icons.eot');
+	src:url('../fonts/clemson-icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/clemson-icons.woff') format('woff'),
+		url('../fonts/clemson-icons.ttf') format('truetype'),
+		url('../fonts/clemson-icons.svg#clemson-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: 'clemson-icons';
+	content: attr(data-icon);
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="icon-"] {
+	font-family: 'clemson-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="icon-"] {
+	font-family: 'clemson-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-paw:before, .sidr-class-icon-paw:before { content: "\e018"; }
+.icon-ring:before { content: "\e00b"; }
+.icon-seal:before { content: "\e016"; }
+.icon-seal2:before { content: "\e017"; }
+.icon-tv:before { content: "\e009"; }
+.icon-tigerrag:before { content: "\e60b"; }
+
+.icon-youtube:before { content: "\e007"; }
+.icon-facebook:before {	content: "\e005"; }
+.icon-facebook-like:before { content: "\e01f"; }
+.icon-twitter:before { content: "\e006"; }
+.icon-flickr:before { content: "\e008"; }
+.icon-google-plus:before { content: "\e024"; }
+.icon-pinterest:before { content: "\e025"; }
+.icon-foursquare:before { content: "\e026"; }
+.icon-linkedin:before { content: "\e027"; }
+.icon-wordpress:before { content: "\e028"; }
+.icon-instagram:before { content: "\e032"; }
+.icon-rss:before { content: "\e004"; }
+
+.icon-calendar:before { content: "\e00e"; }
+.icon-time:before { content: "\e002"; }
+.icon-location:before {	content: "\e003"; }
+.icon-gps:before { content: "\e949"; }
+.icon-compass:before { content: "\e94a"; }
+.icon-map:before { content: "\e94b"; }
+
+.icon-home:before { content: "\e603"; }
+.icon-home2:before { content: "\e902"; }
+.icon-checkmark:before { content: "\e370"; }
+.icon-refresh:before { content: "\e012"; }
+.icon-search:before, .sidr-class-icon-search:before { content: "\e001"; }
+.icon-grid:before { content: "\e030"; }
+.icon-menu:before {	content: "\f0c9"; }
+.icon-loading:before {	content: "\e97c"; }
+.icon-lock:before {	content: "\e98f"; }
+.icon-alert:before { content: "\ea07"; }
+
+.icon-close:before { content: "\e01a"; }
+.icon-close-light:before { content: "\e117"; }
+.icon-close-bold:before { content: "\ea0f"; }
+.icon-plus:before {	content: "\e019"; }
+.icon-cancel:before { content: "\e366"; }
+
+.icon-down:before { content: "\e601"; }
+.icon-up:before { content: "\e602"; }
+.icon-arrow-left:before { content: "\e013"; }
+.icon-arrow-right:before { content: "\e014"; }
+.icon-arrow-down:before { content: "\e015"; }
+.icon-scroll-down:before { content: "\e01b"; }
+
+.icon-play:before { content: "\e903"; }
+.icon-play-thin:before { content: "\e606"; }
+.icon-pause:before { content: "\e904"; }
+.icon-stop:before { content: "\e905"; }
+
+.icon-writer:before { content: "\e00a"; }
+.icon-category:before { content: "\e00c"; }
+.icon-heart:before { content: "\e00d"; }
+.icon-comments:before { content: "\e000"; }
+.icon-tag:before { content: "\e010"; }
+
+.icon-handicap:before { content: "\e604"; }
+.icon-vending:before { content: "\e605"; }
+.icon-retail:before { content: "\e607"; }
+.icon-administrative:before { content: "\e609"; }
+.icon-dining:before { content: "\e60a"; }
+.icon-dining2:before { content: "\e614"; }
+.icon-parking:before { content: "\e60d"; }
+.icon-lab:before { content: "\e60e"; }
+.icon-printer:before { content: "\e60f"; }
+.icon-recreation:before { content: "\e610"; }
+.icon-visitor:before { content: "\e611"; }
+.icon-academic:before { content: "\e612"; }
+.icon-emergency:before { content: "\e608"; }
+.icon-emergency-square:before { content: "\e613"; }
+
+.icon-grad-hat:before { content: "\e076"; }
+.icon-pencil:before { content: "\e01e"; }
+.icon-camera:before { content: "\e011"; }
+.icon-camera-play:before { content: "\e900"; }
+
+.icon-gift:before {	content: "\e00f"; }
+.icon-apple:before { content: "\e01c"; }
+.icon-pictures:before {	content: "\e01d"; }
+.icon-pie:before { content: "\e020"; }
+.icon-briefcase:before { content: "\e021"; }
+.icon-tools:before { content: "\e022"; }
+.icon-feather:before { content: "\e023"; }
+.icon-newspaper:before { content: "\e029"; }
+.icon-atom:before { content: "\e02a"; }
+.icon-earth:before { content: "\e02b"; }
+.icon-book:before { content: "\e02c"; }
+.icon-trophy:before { content: "\e02d"; }
+.icon-steps:before { content: "\e02e"; }
+.icon-history:before { content: "\e02f"; }
+.icon-cog:before { content: "\e031"; }
+.icon-wrench:before { content: "\e034"; }
+.icon-hammer:before { content: "\e996"; }
+.icon-bus:before { content: "\e033"; }
+.icon-screen:before { content: "\e617"; }
+.icon-television:before { content: "\e600"; }
+
+.icon-apply:before { content: "\e914"; }
+.icon-checklist:before { content: "\e901"; }
+.icon-more-info:before { content: "\ed61"; }
+.icon-upload:before { content: "\ec78"; }
+.icon-plus-light:before { content: "\ed5a"; }
+.icon-arrow-left-fat:before { content: "\edcf"; }
+.icon-arrow-right-fat:before { content: "\edcb"; }
+
+
+/** BRANDING COLORS **/
+.orangeBG { background-color: #F66733; }
+.blueRidgeBG { background-color: #3A4958; }
+.innovationBG { background-color: #86898C; }
+.regaliaBG { background-color: #522D80; }
+.moonBG { background-color: #D4C99E; }
+.brickBG { background-color: #A25016; }
+.rockBG { background-color: #685C53; }
+.oakBG { background-color: #562E19; }
+.bowmanBG { background-color: #566127; }
+.laceBG { background-color: #F9E498; }
+.calhounBG { background-color: #B5C327; }
+.gamedayBG { background-color: #109DC0; }
+.bengalBG { background-color: #000000; }
+.forthillBG { background-color: #FFFFFF; }
+.orangeTxt { color: #F66733; }
+.blueRidgeTxt { color: #3A4958; }
+.innovationTxt { color: #86898C; }
+.regaliaTxt { color: #522D80; }
+.moonTxt { color: #D4C99E; }
+.brickTxt { color: #A25016; }
+.rockTxt { color: #685C53; }
+.oakTxt { color: #562E19; }
+.bowmanTxt { color: #566127; }
+.laceTxt { color: #F9E498; }
+.calhounTxt { color: #B5C327; }
+.gamedayTxt { color: #109DC0; }
+.bengalTxt { color: #000000; }
+.forthillTxt { color: #FFFFFF; }

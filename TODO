@@ -1,0 +1,12 @@
+TODO:
+
+
+Google Calendar API:
+https://developers.google.com/google-apps/calendar/v3/reference/events/get#try-it
+https://developers.google.com/apis-explorer/#p/discovery/v1/discovery.apis.getRest?api=calendar&version=v3&_h=6&
+https://developers.google.com/discovery/v1/getting_started#REST
+SIMPLE ACCESS: https://developers.google.com/api-client-library/javascript/samples/samples#authorizing-and-making-authorized-requests
+https://support.google.com/cloud/answer/6310037
+
+TRY THIS GET URL ON THE SERVER. MUST BE ON NECLEMSONCLUB.COM:
+https://www.googleapis.com/calendar/v3/calendars/5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4
