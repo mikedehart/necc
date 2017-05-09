@@ -19,11 +19,13 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- Initial scripts and CSS files. Additional scripts at bottom of page -->
-	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<!-- <link href="css/normalize.css" rel="stylesheet" type="text/css"> -->
 	<link href="css/clemson_style.css" rel="stylesheet" type="text/css">
 	<link href="css/clemson_brand.css" rel="stylesheet" type="text/css">
 	<link href="css/necc_main.css" rel="stylesheet" type="text/css">
 	<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+	<script src="js/modernizr.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -41,20 +43,24 @@
 			<div class="contain">
 				<ul>
 				<!-- add class nav-hover and un-comment js to get animation -->
-					<li><a href="index.html"><h1>Home</h1></a></li>
-					<li class="nav-active"><a href="events.html"><h1>Events</h1></a></li>
-					<li><a href="philanthropy.html"><h1>Philanthropy</h1></a></li>
-					<li><a href="membership.html"><h1>Membership</h1></a></li>
-					<li><a href="contactus.html"><h1>About</h1></a></li>
+					<!-- first nav is for small screens only -->
+					<li><a href="#" class="show-for-small"><h1>Home</h1></a></li>
+					<li><a href="index.html" class="hide-for-small"><h1>Home</h1></a></li>
+					<li class="nav-active"><a href="events.html" class="hide-for-small"><h1>Events</h1></a></li>
+					<li><a href="philanthropy.html" class="hide-for-small"><h1>Philanthropy</h1></a></li>
+					<li><a href="membership.html" class="hide-for-small"><h1>Membership</h1></a></li>
+					<li><a href="contactus.html" class="hide-for-small"><h1>About</h1></a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- Mobile Nav. Hidden on big screens -->
 		<div id="mobile-nav" style="display: none;">
 			<ul class="top-level">
-				<li><a href="#">Testing1</a></li>
-				<li><a href="#">Testing2</a></li>
-				<li><a href="#">Testing3</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="philanthropy.html">Philanthropy</a></li>
+				<li><a href="membership.html">Membership</a></li>
+				<li><a href="contactus.html">About</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -71,16 +77,11 @@
 		<div id="main-content" class="large-16 medium-15 small-16 columns">
 			<h1>Events</h1>
 			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
-			<hr />
 			<h2 class="panel orange">Upcoming Events</h2>
 			<div class="row">
 			<div id="content1"></div>
 				<ul class="inline-list">
 					<div id="eventCol1" class="large-8 medium-8 small-16 columns">
-					<div id="content1">
-						<p></p>
-					</div>
-
 						<li>
 							<div class="main-event">
 								<div class="main-event-date">
@@ -176,6 +177,26 @@
 						</li>
 					</div>
 				</ul>
+			</div>
+			<div class="row">
+				<div id="gamewatch" class="large-16 medium-16 columns">
+					<hr />
+					<h2 class="panel orange">Game Watch Parties</h2>
+					<p>Game watch party information</p>
+					<div class="large-4 medium-6 columns">
+						<h4 class="last condensed"><a href="http://www.centralwharfco.com">Central Wharf Company</a></h4>
+						<p>160 Milk St
+						<br />
+							Boston, MA 02110
+						</p>
+					</div>
+					<div class="large-12 medium-10 columns">
+						<div class="flex-video map">
+							<iframe allowfullscreen="" src="
+https://www.google.com/maps/embed/v1/place?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&q=Central+Wharf+Co,Boston+MA" style="border: 0;" width="320" height="240" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div> <!-- END OF CONTENT ROW -->
 	</div>

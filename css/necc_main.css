@@ -131,6 +131,17 @@ header {
 
 
 
+/* For Events Page
+================================ */
+
+#gamewatch {
+  background-color: #FFF;
+}
+
+.gamewatch_text {
+  font-size: 2em;
+}
+
 
 
 
