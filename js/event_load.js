@@ -7,7 +7,6 @@ function getCal () {
 			console.log(response);
 			processEvents(response);
 		}
-
 	});
 }
 
