@@ -14,18 +14,17 @@ function processEvents(response) {
 	let x = response['items'];
 	let month_abbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	let allEvents = [];
-	for (i in x){
+	for (i in x) {
 		let loc = x[i]['location'];
 		let singleEvent = [];
-		let eventDate = x[i]['start']['dateTime'].slice(0,10);
+		let eventDate = x[i]['start']['dateTime'];
 		let mnth = month_abbr[getEventMonth(eventDate) - 1];
 		let day = getEventDay(eventDate);
 		let htmlLink = x[i]['htmlLink'];
 		let description = x[i]['description'];
 		let title = x[i]['summary'];
-
-		console.log("Event stats:\n"+htmlLink+"\n"+title+"\n"+description+"\n"+
-			mnth+"\n"+day+"\n")
+		console.log(x[i]['start']['dateTime']);
+	
 		singleEvent.push(
 				"<li>",
 				"<div class=\"main-event\">",
@@ -44,24 +43,23 @@ function processEvents(response) {
 				title,
 				"</a></p>",
 				"<p class=\"main-event-time\">",
-				8:00 am,
+				"TODO",
 				"</p>",
 				"<p class=\"main-event-location\">",
 				loc,
 				"</p>",
-				"</aside>"
-			);
-		singleEvent.push(
+				"</aside>",
 				"<p class=\"main-event-desc\">",
 				description,
 				"</p>",
 				"</div>",
 				"</li>"
 			);
-		allEvents.push(singleEvent);
-		console.log(singleEvent.join(""));
+
+		allEvents.push(singleEvent.join(""));
 	}
-	console.log(allEvents);
+	
+	$("#eventCol").html(allEvents.join("\n"));
 }
 
 function getEventMonth(fullDate) {
