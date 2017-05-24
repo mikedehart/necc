@@ -21,6 +21,7 @@ function processEvents(response) {
 		let mnth = month_abbr[getEventMonth(eventDate) - 1];
 		let day = getEventDay(eventDate);
 		let htmlLink = x[i]['htmlLink'];
+		let eventTime = getEventTime(eventDate);
 		let description = x[i]['description'];
 		let title = x[i]['summary'];
 		console.log(x[i]['start']['dateTime']);
@@ -43,7 +44,7 @@ function processEvents(response) {
 				title,
 				"</a></p>",
 				"<p class=\"main-event-time\">",
-				"TODO",
+				eventTime,
 				"</p>",
 				"<p class=\"main-event-location\">",
 				loc,
@@ -59,7 +60,8 @@ function processEvents(response) {
 		allEvents.push(singleEvent.join(""));
 	}
 	
-	$("#eventCol").html(allEvents.join("\n"));
+	document.getElementById("eventCol").innerHTML = allEvents.join("\n");
+	//$("#eventCol").html(allEvents.join("\n"));
 }
 
 function getEventMonth(fullDate) {
@@ -68,4 +70,9 @@ function getEventMonth(fullDate) {
 
 function getEventDay(fullDate) {
 	return parseInt(fullDate.slice(8,10));
+}
+
+function getEventTime(fullDate) {
+	// TODO: conver this to am/pm
+	return fullDate.slice(11,16);
 }
