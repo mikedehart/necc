@@ -75,87 +75,114 @@
 	<div class="row">
 		<!-- MAIN CONTENT TOP -->
 		<div id="main-content" class="large-16 medium-15 small-16 columns">
-			<h1>Events</h1>
-			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
-			<h2 class="panel orange">Upcoming Events</h2>
+				<!-- Example calendar embed. Not used right now
+				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe> -->
 			<div class="row">
-			<div id="content1"></div>
-				<ul class="inline-list">
-					<div id="eventCol" class="large-16 medium-16 small-16 columns">
-						<!-- <li>
-							<div class="main-event">
-								<div class="main-event-date">
-									<span class="month">Feb</span>
-									<span class="day">9</span>
-								</div>
-								<aside>
-									<p class="main-event-title"><a href="#">This is an Event Title</a></p>
-									<p class="main-event-time">8:00 am</p>
-									<p class="main-event-location">Central Wharf</p>
-								</aside>
-								<p class="main-event-desc">Testing 1 2 3</p>
-							</div>
-						</li>
-						<li>
-							<div class="main-event">
-								<div class="main-event-date">
-									<span class="month">Feb</span>
-									<span class="day">9</span>
-								</div>
-								<aside>
-									<p class="main-event-title"><a href="#">This is an Event Title</a></p>
-									<p class="main-event-time">8:00 am</p>
-									<p class="main-event-location">Central Wharf</p>
-								</aside>
-							</div>
-						</li>
-						<li>
-							<div class="main-event">
-								<div class="main-event-date">
-									<span class="month">Feb</span>
-									<span class="day">9</span>
-								</div>
-								<aside>
-									<p class="main-event-title"><a href="#">This is an Event Title</a></p>
-									<p class="main-event-time">8:00 am</p>
-									<p class="main-event-location">Central Wharf</p>
-								</aside>
-							</div>
-						</li>
-						<li>
-							<div class="main-event">
-								<div class="main-event-date">
-									<span class="month">Feb</span>
-									<span class="day">9</span>
-								</div>
-								<aside>
-									<p class="main-event-title"><a href="#">This is an Event Title</a></p>
-									<p class="main-event-time">8:00 am</p>
-									<p class="main-event-location">Central Wharf</p>
-								</aside>
-							</div>
-						</li>
-						<li>
-							<div class="main-event">
-								<div class="main-event-date">
-									<span class="month">Feb</span>
-									<span class="day">9</span>
-								</div>
-								<aside>
-									<p class="main-event-title"><a href="#">This is an Event Title</a></p>
-									<p class="main-event-time">8:00 am</p>
-									<p class="main-event-location">Central Wharf</p>
-								</aside>
-							</div>
-						</li> -->
-					</div>
-				</ul>
+				<div class="large-16 columns">
+					<h1>Events</h1>
+					<img src="img/game_watch1_1540.png" alt="Clemson Events" />
+					<p>The New England Clemson Club hosts game watch parties for every Clemson football game during the season. <a href="#gamewatch">See below</a> for more information. We also host regular events year-round such as brunches, Red Sox games, trivia nights and more. Check this page regularly for updates.</p>
+				</div>
 			</div>
+			<div class="row">
+				<div id="event_section" class="large-4 columns">
+					<div class="button expand regalia icon"><span class="icon-calendar"></span>View Full Calendar</div>
+
+
+					
+				</div>
+				<div class="large-6 columns">
+					<div id="event_banner" class="large-16 panel regalia">
+						<h5 class="last">Buy your Clemson Club Brunch tickets here!</h5>
+						<span>
+							<form id="brunch_tix" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="B83XK3RRBP7PY">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<!-- tracking crap 
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
+							</form>
+						</span>
+					</div>
+				</div>
+			</div>
+				<div class="row">
+					<div id="eventCol" class="large-16 medium-16 small-16 columns">
+						<ul id="event_list" class="indent no-bullets">
+							<li>
+								<div class="main-event">
+									<div class="main-event-date">
+										<span class="month">Feb</span>
+										<span class="day">9</span>
+									</div>
+									<aside>
+										<p class="main-event-title"><a href="#">This is an Event Title</a></p>
+										<p class="main-event-time">8:00 am</p>
+										<p class="main-event-location">Central Wharf</p>
+									</aside>
+									<p class="main-event-desc">Testing 1 2 3</p>
+								</div>
+							</li>
+							<li>
+								<div class="main-event">
+									<div class="main-event-date">
+										<span class="month">Feb</span>
+										<span class="day">9</span>
+									</div>
+									<aside>
+										<p class="main-event-title"><a href="#">This is an Event Title</a></p>
+										<p class="main-event-time">8:00 am</p>
+										<p class="main-event-location">Central Wharf</p>
+									</aside>
+								</div>
+							</li>
+							<li>
+								<div class="main-event">
+									<div class="main-event-date">
+										<span class="month">Feb</span>
+										<span class="day">9</span>
+									</div>
+									<aside>
+										<p class="main-event-title"><a href="#">This is an Event Title</a></p>
+										<p class="main-event-time">8:00 am</p>
+										<p class="main-event-location">Central Wharf</p>
+									</aside>
+								</div>
+							</li>
+							<li>
+								<div class="main-event">
+									<div class="main-event-date">
+										<span class="month">Feb</span>
+										<span class="day">9</span>
+									</div>
+									<aside>
+										<p class="main-event-title"><a href="#">This is an Event Title</a></p>
+										<p class="main-event-time">8:00 am</p>
+										<p class="main-event-location">Central Wharf</p>
+									</aside>
+								</div>
+							</li>
+							<li>
+								<div class="main-event">
+									<div class="main-event-date">
+										<span class="month">Feb</span>
+										<span class="day">9</span>
+									</div>
+									<aside>
+										<p class="main-event-title"><a href="#">This is an Event Title</a></p>
+										<p class="main-event-time">8:00 am</p>
+										<p class="main-event-location">Central Wharf</p>
+									</aside>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
 			<div class="row">
 				<div id="gamewatch" class="large-16 medium-16 columns">
 					<hr />
-					<h2 class="panel orange">Game Watch Parties</h2>
-					<p>Our game watch parties are usually on the 2nd floor of Central Wharf Restaurant and Bar. However, the location can change based on the game. Please check the calendar above or <a href="">our Facebook page</a> to double-check.</p>
+					<h2>Game Watch Parties</h2>
+					<p>Our game watch parties are usually on the 2nd floor of Central Wharf Restaurant and Bar. However, the location can change based on the game. Please check the calendar above or <a href="">our Facebook page</a> to confirm the specific game location.</p>
 					<p></p>
 					<div class="large-4 medium-6 columns">
 						<h4 class="last condensed"><a href="http://www.centralwharfco.com">Central Wharf Company</a></h4>
@@ -164,7 +191,7 @@
 							Boston, MA 02110
 						</p>
 					</div>
-					<div class="large-12 medium-10 columns">
+					<div class="large-8 columns">
 						<div class="flex-video map">
 							<iframe allowfullscreen="" src="
 https://www.google.com/maps/embed/v1/place?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&q=Central+Wharf+Co,Boston+MA" style="border: 0;" width="320" height="240" frameborder="0"></iframe>
@@ -174,9 +201,24 @@ https://www.google.com/maps/embed/v1/place?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD
 			</div>
 		</div> <!-- END OF CONTENT ROW -->
 	</div>
-</div>
+		<hr>
+		<ul class="social last">
+			<li><a href="https://www.facebook.com/NewEnglandClemsonClub"><span class="icon-facebook"></span><span class="screen-reader-text">NECC Facebook Page</span></a></li>
+						<li><a href="https://twitter.com/NEClemsonClub"><span class="icon-twitter"></span><span class="screen-reader-text">NECC Twitter Page</span></a></li>
+						<li><a href="#"><span class="icon-youtube"></span><span class="screen-reader-text">NECC Youtube Page</span></a></li>
+						<li><a href="#"><span class="icon-linkedin"></span><span class="screen-reader-text">NECC Linkedin Page</span></a></li>
+						<li><a href="#"><span class="icon-google-plus"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
+						<li><a href="#"><span class="icon-instagram"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
+						<li><a href="#"><span class="icon-pinterest"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
+						<li><a href="#"><span class="icon-rss"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
+		</ul>
+</div> <!-- end of page div -->
 <footer class="hide-on-print">
-
+	<div class="row">
+		<div class="large-16 medium-12 columns">
+			<div class="icon-seal"></div>
+		</div>
+	</div>
 </footer>
 </body>
 <!-- Scripts loaded here after content -->

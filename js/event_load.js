@@ -1,7 +1,6 @@
 function getCal () {
 	$.ajax({
-		url: "https://www.googleapis.com/calendar/v3/calendars/5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() +
-		"&maxResults=7",
+		url: "https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() + "&maxResults=7",
 		type: "GET",
 		dataType: "json",
 		success: function(response) {
@@ -12,18 +11,22 @@ function getCal () {
 
 function processEvents(response) {
 	let x = response['items'];
-	let month_abbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	let monthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	let allEvents = [];
 	for (i in x) {
-		let loc = x[i]['location'];
-		let singleEvent = [];
-		let eventDate = x[i]['start']['dateTime'];
-		let mnth = month_abbr[getEventMonth(eventDate) - 1];
-		let day = getEventDay(eventDate);
-		let htmlLink = x[i]['htmlLink'];
-		let eventTime = getEventTime(eventDate);
-		let description = x[i]['description'];
-		let title = x[i]['summary'];
+		let loc = x[i]['location'];	// Event Location
+		let singleEvent = [];	// This is filled and pushed to allEvents array
+		let startDate = x[i]['start']['dateTime'];	// Start date/time of the event
+		let endDate = x[i]['end']['dateTime'];	// End date/time of the event
+		let mnth = monthAbbr[getEventMonth(startDate) - 1];	// 3-char month using the numeric value for index.
+		let day = getEventDay(startDate); // Calendar day of the event
+		let htmlLink = x[i]['htmlLink'];	// HTML link to the event in Google cal.
+		let eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
+		let description = x[i]['description']; // Description field for details on event
+		let title = x[i]['summary']; // Event title
+
+
+
 		console.log(x[i]['start']['dateTime']);
 	
 		singleEvent.push(

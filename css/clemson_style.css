@@ -74,7 +74,7 @@ body {
   padding: 0;
   margin: 0;
   /* font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; */
-  font-family: 'Roboto', "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
+  font-family: 'Oswald', "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -4297,7 +4297,7 @@ p aside {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
 /* font-family: "Trade Gothic", Verdana, sans-serif; */
-  font-family: "Trade Gothic", "Roboto Slab", sans-serif;
+  font-family: "Trade Gothic", "Oswald", sans-serif;
   font-weight: normal;  font-weight: bold;
   font-style: normal;
   color: #222222;

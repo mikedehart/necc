@@ -15,7 +15,8 @@ h3#event_title {
 /* Main events. calendar/event page */
 .main-event {
   display: block;
-  margin-bottom: 0.9375rem;
+  
+  margin-bottom: 1.5rem;
   border-bottom: 1px dotted #ccc;
   padding-bottom: 5px;
 }
@@ -72,6 +73,13 @@ h3#event_title {
   line-height: 1;
 }
 
+#brunch_tix {
+  display: inline;
+}
+
+#event_banner {
+
+}
 
 /* ADDITIONAL CSS
 =============================================== */
@@ -148,6 +156,38 @@ header {
   font-size: 2em;
 }
 
+#brunch_tix {
+  display: inline;
+}
 
 
+/* Social Media Links
+======================= */
+
+#social-footer {
+  border-bottom: solid 1px #BA5026;
+}
+
+#social-footer a {
+  color: #ba5026;
+}
+
+#social-footer a:hover {
+  color: #DDD;
+}
+
+#social-footer hr {
+  color: #ba5026;
+}
+
+
+
+/* Footer
+============ */
+
+footer .icon-seal {
+  color: #ba5026;
+  text-align: center;
+  font-size: 8rem;
+}
 
