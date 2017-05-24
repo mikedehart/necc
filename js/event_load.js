@@ -1,6 +1,7 @@
 function getCal () {
 	$.ajax({
-		url: "https://www.googleapis.com/calendar/v3/calendars/5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString(),
+		url: "https://www.googleapis.com/calendar/v3/calendars/5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() +
+		"&maxResults=7",
 		type: "GET",
 		dataType: "json",
 		success: function(response) {
@@ -12,21 +13,55 @@ function getCal () {
 function processEvents(response) {
 	let x = response['items'];
 	let month_abbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	let allEvents = [];
 	for (i in x){
 		let loc = x[i]['location'];
-		console.log(loc);
+		let singleEvent = [];
 		let eventDate = x[i]['start']['dateTime'].slice(0,10);
 		let mnth = month_abbr[getEventMonth(eventDate) - 1];
 		let day = getEventDay(eventDate);
-		console.log(eventDate + " " + mnth);
+		let htmlLink = x[i]['htmlLink'];
+		let description = x[i]['description'];
+		let title = x[i]['summary'];
+
+		console.log("Event stats:\n"+htmlLink+"\n"+title+"\n"+description+"\n"+
+			mnth+"\n"+day+"\n")
+		singleEvent.push(
+				"<li>",
+				"<div class=\"main-event\">",
+				"<div class=\"main-event-date\">",
+				"<span class=\"month\">",
+				mnth,
+				"</span>",
+				"<span class=\"day\">",
+				day,
+				"</span>",
+				"</div>",
+				"<aside>",
+				"<p class=\"main-event-title\"><a href=\"",
+				htmlLink,
+				"\">",
+				title,
+				"</a></p>",
+				"<p class=\"main-event-time\">",
+				8:00 am,
+				"</p>",
+				"<p class=\"main-event-location\">",
+				loc,
+				"</p>",
+				"</aside>"
+			);
+		singleEvent.push(
+				"<p class=\"main-event-desc\">",
+				description,
+				"</p>",
+				"</div>",
+				"</li>"
+			);
+		allEvents.push(singleEvent);
+		console.log(singleEvent.join(""));
 	}
-	/* for (let i = 0;i<x.length;i++){
-		let loc = x[i]['location'];
-		let date_time = x[i]['start'];
-		console.log(loc);
-		console.log(date_time);
-	} */
-	console.log(x);
+	console.log(allEvents);
 }
 
 function getEventMonth(fullDate) {
