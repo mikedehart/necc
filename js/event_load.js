@@ -63,7 +63,7 @@ function processEvents(response) {
 		allEvents.push(singleEvent.join(""));
 	}
 	
-	document.getElementById("eventCol").innerHTML = allEvents.join("\n");
+	document.getElementById("event_list").innerHTML = allEvents.join("\n");
 	//$("#eventCol").html(allEvents.join("\n"));
 }
 
