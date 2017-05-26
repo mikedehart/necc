@@ -1,9 +1,5 @@
 <!--
-	New England Clemson Club Alumni Page
-	By Mike DeHart
-
-	CONTACT US PAGE
-
+	EVENTS PAGE
 -->
 <!DOCTYPE html>
 <html>
@@ -11,32 +7,27 @@
 	<!-- Meta Info -->
 	<meta charset="utf-8" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<meta name="description" content="Home of the New England Clemson Club" />
-	<meta name="keywords" content="clemson alumni,new england clemson,new england clemson club" />
-	<meta name="robots" content="index,follow" />
+	<meta name="description" content="New England Clemson Club Events" />
+	<meta name="keywords" content="clemson alumni,new england clemson,new england clemson club, events" />
+	<meta name="robots" content="index,nofollow" />
 	<title>New England Clemson Club</title>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.ico" />
+
 	<!-- Initial scripts and CSS files. Additional scripts at bottom of page -->
-	<!-- <link href="css/normalize.css" rel="stylesheet" type="text/css"> -->
 	<link href="css/clemson_style.css" rel="stylesheet" type="text/css">
 	<link href="css/clemson_brand.css" rel="stylesheet" type="text/css">
 	<link href="css/necc_main.css" rel="stylesheet" type="text/css">
-	<link href="css/animate.css" rel="stylesheet" type="text/css">
-
-	<script src="js/modernizr.js" type="text/javascript"></script>
 </head>
 
 <body>
-	<!-- Header. Might need adjusting? -->
+	<!-- Header -->
 	<header>
 		<div id="header-bg" class="contain">
-			<div id="wordmark" class="text-center">
-				<h1 class="text-primary">New England Clemson Club</h1>
-			</div>
 		</div>
 	</header>
+
 	<!-- Horizontal purple and tab bars -->
 	<nav id="dropdownbar" class="hide-on-print">
 		<div id="purplebar">
@@ -49,7 +40,7 @@
 					<li class="nav-active"><a href="events.html" class="hide-for-small"><h1>Events</h1></a></li>
 					<li><a href="academics.html" class="hide-for-small"><h1>Academics</h1></a></li>
 					<li><a href="membership.html" class="hide-for-small"><h1>Membership</h1></a></li>
-					<li><a href="contactus.html" class="hide-for-small"><h1>About</h1></a></li>
+					<li><a href="service.html" class="hide-for-small"><h1>Service</h1></a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,36 +51,27 @@
 				<li><a href="events.html">Events</a></li>
 				<li><a href="academics.html">Academics</a></li>
 				<li><a href="membership.html">Membership</a></li>
-				<li><a href="contactus.html">About</a></li>
+				<li><a href="service.html">Service</a></li>
 			</ul>
 		</div>
 	</nav>
 
-<!--
-	Page Contents Below:
-	- Left-side nav bar
-	- Main Content
--->
-
+<!-- Beginning of main page -->
 <div id="page">
 	<div class="row">
 		<!-- MAIN CONTENT TOP -->
 		<div id="main-content" class="large-16 medium-15 small-16 columns">
-				<!-- Example calendar embed. Not used right now
-				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe> -->
 			<div class="row">
 				<div class="large-16 columns">
 					<h1>Events</h1>
 					<img src="img/game_watch1_1540.png" alt="Clemson Events" />
-					<p>The New England Clemson Club hosts game watch parties for every Clemson football game during the season. <a href="#gamewatch">See below</a> for more information. We also host regular events year-round such as brunches, Red Sox games, trivia nights and more. Check this page regularly for updates.</p>
+					<p id="event_info">The New England Clemson Club hosts game watch parties for every Clemson football game during the season. <a href="#gamewatch">See below</a> for more information. We also host regular events year-round such as brunches, Red Sox games, trivia nights and more. Check this page regularly for updates.</p>
 				</div>
 			</div>
+			<!-- Event announcements below -->
 			<div class="row">
 				<div id="event_section" class="large-4 columns">
-					<div class="button expand regalia icon"><span class="icon-calendar"></span>View Full Calendar</div>
-
-
-					
+					<a href="https://calendar.google.com/calendar/embed?src=odfj419lp01ad8bsgp78d4dh8k%40group.calendar.google.com&ctz=America/New_York" class="button expand regalia icon"><span class="icon-calendar"></span>View Full Calendar</a>
 				</div>
 				<div class="large-6 columns">
 					<div id="event_banner" class="large-16 panel regalia">
@@ -98,7 +80,7 @@
 							<form id="brunch_tix" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_s-xclick">
 								<input type="hidden" name="hosted_button_id" value="B83XK3RRBP7PY">
-								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="Buy Tickets via PayPal">
 								<!-- tracking crap 
 								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
 							</form>
@@ -106,10 +88,11 @@
 					</div>
 				</div>
 			</div>
+				<!-- Event queries displayed in this row -->
 				<div class="row">
 					<div id="eventCol" class="large-16 medium-16 small-16 columns">
 						<ul id="event_list" class="indent no-bullets">
-							<!-- Test Event Syntax -->
+							<!-- Test Event Syntax
 							<li>
 								<div class="main-event">
 									<div class="main-event-date">
@@ -123,7 +106,7 @@
 									</aside>
 									<p class="main-event-desc">Come join us for brunch in Cambridge to meet other Clemson alumni here in New England! Tickets are $25 per person and can be purchased via the Paypal link on the events page.</p>
 								</div>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 				</div>
@@ -131,7 +114,7 @@
 				<div id="gamewatch" class="large-16 medium-16 columns">
 					<hr />
 					<h2>Game Watch Parties</h2>
-					<p>Our game watch parties are usually on the 2nd floor of Central Wharf Restaurant and Bar. However, the location can change based on the game. Please check the calendar above or <a href="">our Facebook page</a> to confirm the specific game location.</p>
+					<p>Our game watch parties are usually on the 2nd floor of Central Wharf Restaurant and Bar. However, the location can change based on the game. Please check the calendar above or <a href="https://www.facebook.com/NewEnglandClemsonClub">our Facebook page</a> to confirm the specific game location.</p>
 					<p></p>
 					<div class="large-4 medium-6 columns">
 						<h4 class="last condensed"><a href="http://www.centralwharfco.com">Central Wharf Company</a></h4>
@@ -150,22 +133,35 @@ https://www.google.com/maps/embed/v1/place?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD
 			</div>
 		</div> <!-- END OF CONTENT ROW -->
 	</div>
-		<hr>
-		<ul class="social last">
-			<li><a href="https://www.facebook.com/NewEnglandClemsonClub"><span class="icon-facebook"></span><span class="screen-reader-text">NECC Facebook Page</span></a></li>
-						<li><a href="https://twitter.com/NEClemsonClub"><span class="icon-twitter"></span><span class="screen-reader-text">NECC Twitter Page</span></a></li>
-						<li><a href="#"><span class="icon-youtube"></span><span class="screen-reader-text">NECC Youtube Page</span></a></li>
-						<li><a href="#"><span class="icon-linkedin"></span><span class="screen-reader-text">NECC Linkedin Page</span></a></li>
-						<li><a href="#"><span class="icon-google-plus"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
-						<li><a href="#"><span class="icon-instagram"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
-						<li><a href="#"><span class="icon-pinterest"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
-						<li><a href="#"><span class="icon-rss"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
-		</ul>
+	<hr>
+	<ul class="social last">
+		<li><a href="https://www.facebook.com/NewEnglandClemsonClub"><span class="icon-facebook"></span><span class="screen-reader-text">NECC Facebook Page</span></a></li>
+		<li><a href="https://twitter.com/NEClemsonClub"><span class="icon-twitter"></span><span class="screen-reader-text">NECC Twitter Page</span></a></li>
+		<li><a href="https://www.linkedin.com/groups/4803433/profile"><span class="icon-linkedin"></span><span class="screen-reader-text">NECC Linkedin Page</span></a></li>
+		<li><a href="https://www.instagram.com/neclemsonclub/"><span class="icon-instagram"></span><span class="screen-reader-text">NECC Instagram</span></a></li>
+		<li><a href="https://www.pinterest.com/pin/81979655689956759/"><span class="icon-pinterest"></span><span class="screen-reader-text">NECC Pintrest</span></a></li>
+	</ul>
 </div> <!-- end of page div -->
 <footer class="hide-on-print">
 	<div class="row">
-		<div class="large-16 medium-12 columns">
-			<div class="icon-seal"></div>
+		<div id="site_map" class="large-6 columns">
+			<h3 class="last">Site Map</h3>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="academics.html">Academics</a></li>
+				<li><a href="membership.html">Membership</a></li>
+				<li><a href="service.html">Service</a></li>
+				
+			</ul>
+		</div>
+		<div class="large-4 columns">
+			<div aria-hidden="true" class="icon-tigerrag"></div>
+		</div>
+		<div id="contact_us" class="large-6 columns">
+			<h3 class="last">Contact Us</h3>
+			<ul id="contact_links">
+			</ul>
 		</div>
 	</div>
 </footer>
@@ -184,6 +180,7 @@ https://www.google.com/maps/embed/v1/place?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD
 <script type="text/javascript">
 	$(document).ready(function(){
 		getCal();
+		addEmails();
 	});
 </script>
 </html>

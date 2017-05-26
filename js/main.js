@@ -12,6 +12,20 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
+
+
+function addEmails() {
+	var prefix1 = 'info';
+	var suffix1 = 'newenglandclemsonclub.com';
+	var prefix2 = 'mrd.io.tech';
+	var suffix2 = 'gmail.com';
+	var htmlArray = [
+		"<li><a href=\"mailto:"+prefix1+"@"+suffix1+"\">Club Information</li>",
+		"<li><a href=\"mailto:"+prefix2+"@"+suffix2+"\">Website Issues</li>"
+	];
+	document.getElementById("contact_links").innerHTML = htmlArray.join("\n");
+}
+
 // CLEMSON CUSTOM
 $(document).ready(function() {
 
@@ -51,3 +65,4 @@ $(document).ready(function() {
 	*/
 
 });
+
