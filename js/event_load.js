@@ -1,6 +1,6 @@
 function getCal () {
 	$.ajax({
-		url: "https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() + "&maxResults=7",
+		url: "https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() + "&maxResults=7&singleEvents=true&orderBy=startTime",
 		type: "GET",
 		dataType: "json",
 		success: function(response) {
