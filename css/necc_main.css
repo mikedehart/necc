@@ -231,7 +231,7 @@ footer a:visited {
 }
 
 footer #site_map {
-  text-align: left;
+  text-align: right;
 }
 
   footer #site_map h3 {
@@ -239,7 +239,7 @@ footer #site_map {
   }
 
 footer #contact_us {
-  text-align: right;
+  text-align: left;
 }
 
   footer #contact_us h3 {
