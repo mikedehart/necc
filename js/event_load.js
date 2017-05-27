@@ -26,10 +26,6 @@ function processEvents(response) {
 		var eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
 		var description = x[i]['description']; // Description field for details on event
 		var title = x[i]['summary']; // Event title
-
-
-
-		console.log(locLink);
 	
 		singleEvent.push(
 				"<li>",

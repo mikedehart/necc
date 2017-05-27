@@ -188,8 +188,8 @@ header {
 }
 
 
-/* Social Media Links
-======================= */
+/* Social Media Links (using default color for now)
+======================= 
 
 #social-footer {
   border-bottom: solid 1px #BA5026;
@@ -207,6 +207,7 @@ header {
   color: #ba5026;
 }
 
+*/
 
 /* MISC FIXES
 ================== */
@@ -225,7 +226,7 @@ footer .icon-tigerrag {
   font-size: 5rem;
 }
 
-footer a:visited, a:active {
+footer a:visited {
   color: #ba5026;
 }
 
