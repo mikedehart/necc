@@ -22,7 +22,7 @@ function processEvents(response) {
 		var mnth = monthAbbr[getEventMonth(startDate) - 1];	// 3-char month using the numeric value for index.
 		var day = getEventDay(startDate); // Calendar day of the event
 		var htmlLink = x[i]['htmlLink'];	// HTML link to the event in Google cal.
-		var locLink = ["https://www.google.com/maps/search", loc.replace(" ", "+"), "@Boston+MA"];
+		var locLink = ["https://www.google.com/maps/search", loc.replace(/ /g, "+")];
 		var eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
 		var description = x[i]['description']; // Description field for details on event
 		var title = x[i]['summary']; // Event title
@@ -52,7 +52,7 @@ function processEvents(response) {
 				eventTime,
 				"</p>",
 				"<p class=\"main-event-location\"><a href=\"",
-				locLink,
+				locLink.join('/'),
 				"\">",
 				loc,
 				"</a></p>",
