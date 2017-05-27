@@ -23,17 +23,12 @@
 	<link href="css/clemson_style.css" rel="stylesheet" type="text/css">
 	<link href="css/clemson_brand.css" rel="stylesheet" type="text/css">
 	<link href="css/necc_main.css" rel="stylesheet" type="text/css">
-	<!-- <link href="css/animate.css" rel="stylesheet" type="text/css"> -->
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	<script src="js/modernizr.js" type="text/javascript"></script>
 </head>
 <body>
-	<!-- Header. Might need adjusting? -->
+	<!-- Header -->
 	<header>
 		<div id="header-bg" class="contain">
-			<div id="wordmark" class="text-center">
-				<h1 class="text-primary">New England Clemson Club</h1>
-			</div>
 		</div>
 	</header>
 
@@ -74,12 +69,12 @@
 
 			<!-- SLIDESHOW -->
 			<div class="slideshow-wrapper">
-				<ul data-orbit data-options="timer:true; timer_speed:5000;" style="height: 538px;">
+				<ul data-orbit data-options="timer:true; timer_speed:3000;" style="height: 538px;">
 					<li>
-						<img src="img/bos_skyline_1540.jpg" alt="1">
+						<img src="img/library_1540.png" alt="1">
 					</li>
 					<li>
-						<img src="img/game_watch1_1540.png" alt="2">
+						<img src="img/stadium_1540.png" alt="2">
 					</li>
 					<li>
 						<img src="img/bos_skyline_1540.jpg" alt="3">
@@ -174,24 +169,30 @@
 	<li><a href="https://www.facebook.com/NewEnglandClemsonClub"><span class="icon-facebook"></span><span class="screen-reader-text">NECC Facebook Page</span></a></li>
 	<li><a href="https://twitter.com/NEClemsonClub"><span class="icon-twitter"></span><span class="screen-reader-text">NECC Twitter Page</span></a></li>
 	<li><a href="https://www.linkedin.com/groups/4803433/profile"><span class="icon-linkedin"></span><span class="screen-reader-text">NECC Linkedin Page</span></a></li>
-	<li><a href="https://www.instagram.com/neclemsonclub/"><span class="icon-instagram"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
-	<li><a href="https://www.pinterest.com/pin/81979655689956759/"><span class="icon-pinterest"></span><span class="screen-reader-text">NECC RSS Feed</span></a></li>
+	<li><a href="https://www.instagram.com/neclemsonclub/"><span class="icon-instagram"></span><span class="screen-reader-text">NECC Instagram</span></a></li>
+	<li><a href="https://www.pinterest.com/pin/81979655689956759/"><span class="icon-pinterest"></span><span class="screen-reader-text">NECC Pintrest</span></a></li>
 </ul>
 </div> <!-- page div -->
 <footer class="hide-on-print">
 	<div class="row">
-		<div class="large-16 columns">
-			<h3 class="last">Contact Us</h3>
+		<div id="site_map" class="large-6 columns">
+			<h3 class="last">Site Map</h3>
 			<ul>
-				<li>Website Issues</li>
-				<li>Club Information</li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="academics.html">Academics</a></li>
+				<li><a href="membership.html">Membership</a></li>
+				<li><a href="service.html">Service</a></li>
 				
 			</ul>
 		</div>
-	</div>
-	<div class="row">
-		<div class="large-16 columns">
-			<div aria-hidden="true" class="icon-seal"></div>
+		<div class="large-4 columns">
+			<div aria-hidden="true" class="icon-tigerrag"></div>
+		</div>
+		<div id="contact_us" class="large-6 columns">
+			<h3 class="last">Contact Us</h3>
+			<ul id="contact_links">
+			</ul>
 		</div>
 	</div>
 </footer>
@@ -200,7 +201,9 @@
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/foundation.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
+<script src="js/modernizr.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(document).foundation();
+	addEmails();
 </script>
 </html>

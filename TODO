@@ -1,9 +1,12 @@
 TODO:
 
+- EVENTS LINK:
 
+- Clickable locations: https://www.google.com/maps/search/STRING+STRING/@LOCATION+LOCATION
 
-TRY THIS GET URL ON THE SERVER. MUST BE ON NECLEMSONCLUB.COM:
-https://www.googleapis.com/calendar/v3/calendars/5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4
+https://www.google.com/maps/search/central+wharf+restaurant/@boston+ma
+
+https://calendar.google.com/calendar/embed?src=odfj419lp01ad8bsgp78d4dh8k%40group.calendar.google.com&ctz=America/New_York
 
 
 
@@ -29,3 +32,7 @@ https://www.googleapis.com/calendar/v3/calendars/<EMAIL_CALENDAR_LINK>?key=<API_
 
 PRODUCTION:
 https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() + "&maxResults=7&singleEvents=true&orderBy=startTime"
+
+
+Example calendar embed. Not used right now:
+				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5bsos247d2bcrmv7v9kird8vt8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>

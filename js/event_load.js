@@ -1,6 +1,5 @@
 function getCal () {
-
-	let urlString = "https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=" + new Date().toISOString() + "&maxResults=7&singleEvents=true&orderBy=startTime";
+	var urlString = 'https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=' + new Date().toISOString() + '&maxResults=7&singleEvents=true&orderBy=startTime';
 	$.ajax({
 		url: urlString,
 		type: "GET",
@@ -12,24 +11,21 @@ function getCal () {
 }
 
 function processEvents(response) {
-	let x = response['items'];
-	let monthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-	let allEvents = [];
+	var x = response['items'];
+	var monthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	var allEvents = [];
 	for (i in x) {
-		let loc = x[i]['location'];	// Event Location
-		let singleEvent = [];	// This is filled and pushed to allEvents array
-		let startDate = x[i]['start']['dateTime'];	// Start date/time of the event
-		let endDate = x[i]['end']['dateTime'];	// End date/time of the event
-		let mnth = monthAbbr[getEventMonth(startDate) - 1];	// 3-char month using the numeric value for index.
-		let day = getEventDay(startDate); // Calendar day of the event
-		let htmlLink = x[i]['htmlLink'];	// HTML link to the event in Google cal.
-		let eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
-		let description = x[i]['description']; // Description field for details on event
-		let title = x[i]['summary']; // Event title
-
-
-
-		console.log(x[i]['start']['dateTime']);
+		var loc = x[i]['location'];	// Event Location
+		var singleEvent = [];	// This is filled and pushed to allEvents array
+		var startDate = x[i]['start']['dateTime'];	// Start date/time of the event
+		var endDate = x[i]['end']['dateTime'];	// End date/time of the event
+		var mnth = monthAbbr[getEventMonth(startDate) - 1];	// 3-char month using the numeric value for index.
+		var day = getEventDay(startDate); // Calendar day of the event
+		var htmlLink = x[i]['htmlLink'];	// HTML link to the event in Google cal.
+		var locLink = ["https://www.google.com/maps/search", loc.replace(/ /g, "+")];
+		var eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
+		var description = x[i]['description']; // Description field for details on event
+		var title = x[i]['summary']; // Event title
 	
 		singleEvent.push(
 				"<li>",
@@ -51,9 +47,11 @@ function processEvents(response) {
 				"<p class=\"main-event-time\">",
 				eventTime,
 				"</p>",
-				"<p class=\"main-event-location\">",
+				"<p class=\"main-event-location\"><a href=\"",
+				locLink.join('/'),
+				"\">",
 				loc,
-				"</p>",
+				"</a></p>",
 				"</aside>",
 				"<p class=\"main-event-desc\">",
 				description,

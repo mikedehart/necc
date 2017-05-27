@@ -12,6 +12,32 @@ h3#event_title {
 
 
 
+/* HEADER
+================= */
+
+header {
+  background: #f2ae9d url(../img/necc_banner.png) no-repeat left top;
+  border-top: 0.0625rem solid #F66733;
+  position: relative;
+  width: 100%;
+  min-height: 185px;
+}
+
+
+
+
+
+/* @media only screen and (min-width: 1600px) {
+  #header-bg:before, #header-bg:after {
+    content: "";
+    width: 3.125rem;
+    height: 11.8125rem;
+  } */
+
+
+/* Calendar Events
+========================= */
+
 /* Main events. calendar/event page */
 .main-event {
   display: block;
@@ -81,7 +107,7 @@ h3#event_title {
 
 }
 
-/* ADDITIONAL CSS
+/* TOP NAV BAR
 =============================================== */
 #purplebar li h1 {
 	transition: background 0.5s linear;
@@ -101,9 +127,10 @@ h3#event_title {
 }
 
 
-/* NEW site header
+/* OLD site header
  Original is commented out in clemson_style.css
-========================== */
+ This is the backup with no image
+==========================
 
 header {
   background-image: url("../img/logo1.png") repeat top left;
@@ -131,7 +158,7 @@ header {
 #header-bg img {
 }
 
-
+*/
 
 /* For slideshow wrapper
 =============================== */
@@ -161,8 +188,8 @@ header {
 }
 
 
-/* Social Media Links
-======================= */
+/* Social Media Links (using default color for now)
+======================= 
 
 #social-footer {
   border-bottom: solid 1px #BA5026;
@@ -180,22 +207,42 @@ header {
   color: #ba5026;
 }
 
+*/
+
+/* MISC FIXES
+================== */
+
+#event_info {
+  margin-top: 8px;
+}
 
 
 /* Footer
 ============ */
 
-footer .icon-seal {
+footer .icon-tigerrag {
   color: #ba5026;
   text-align: center;
-  font-size: 8rem;
+  font-size: 5rem;
 }
 
-footer h3 {
-  text-align: center;
+footer a:visited {
+  color: #ba5026;
 }
 
-footer ul {
-  text-align: center;
+footer #site_map {
+  text-align: left;
 }
+
+  footer #site_map h3 {
+    color: #ba5026;
+  }
+
+footer #contact_us {
+  text-align: right;
+}
+
+  footer #contact_us h3 {
+    color: #ba5026;
+  }
 
