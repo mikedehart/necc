@@ -77,5 +77,10 @@ function getEventDay(fullDate) {
 
 function getEventTime(fullDate) {
 	// TODO: conver this to am/pm
-	return fullDate.slice(11,16);
+	console.log(fullDate);
+	var time = fullDate.slice(11,16);
+	var hr = parseInt(time.slice(0,2));
+	console.log("Time: "+time+"\n"+"Hour: "+hr);
+
+
 }
