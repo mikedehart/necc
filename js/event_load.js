@@ -68,19 +68,21 @@ function processEvents(response) {
 }
 
 function getEventMonth(fullDate) {
+	// slices the month from time
 	return parseInt(fullDate.slice(5,7));
 }
 
 function getEventDay(fullDate) {
+	// slices the day from time
 	return parseInt(fullDate.slice(8,10));
 }
 
 function getEventTime(fullDate) {
-	// TODO: conver this to am/pm
-	console.log(fullDate);
+	// Slices time and converts to am/pm;
 	var time = fullDate.slice(11,16);
 	var hr = parseInt(time.slice(0,2));
-	console.log("Time: "+time+"\n"+"Hour: "+hr);
-
-
+	var rest = time.slice(2);
+	var suffix = (hr >= 12) ? 'pm' : 'am';
+	hr = ((hr + 11) % 12 + 1);
+	return (hr + rest + suffix);
 }
