@@ -26,6 +26,7 @@ function processEvents(response) {
 		var eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
 		var description = x[i]['description']; // Description field for details on event
 		var title = x[i]['summary']; // Event title
+		var color = x[i]['colorId'];
 	
 		singleEvent.push(
 				"<li>",
@@ -89,7 +90,7 @@ function getEventTime(fullDate) {
 
 
 /**
-	TEST FUNCTION
+	TEST FUNCTION 
 
 */
 
@@ -103,9 +104,12 @@ function testAPI() {
 			var x = response['items'];
 			var vals = [];
 			for (i in x) {
-				vals.push(i.toString());
+				var e  = x[i]['creator']['email'];
+				vals.push(e);
+				if (e === 'deannamdehart@gmail.com') {
+					console.log('Matches');
+				}
 			}
-
 			document.getElementById("test1").innerHTML = vals.join("\n");
 		}
 	});
