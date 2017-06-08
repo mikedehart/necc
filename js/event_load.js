@@ -1,5 +1,6 @@
 function getCal () {
 	var urlString = 'https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=' + new Date().toISOString() + '&maxResults=7&singleEvents=true&orderBy=startTime';
+	var currPage = window.location.href.split('/').pop();
 	$.ajax({
 		url: urlString,
 		type: "GET",
@@ -26,7 +27,6 @@ function processEvents(response) {
 		var eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
 		var description = x[i]['description']; // Description field for details on event
 		var title = x[i]['summary']; // Event title
-		var color = x[i]['colorId'];
 	
 		singleEvent.push(
 				"<li>",
