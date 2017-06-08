@@ -93,14 +93,20 @@ function getEventTime(fullDate) {
 
 */
 
-function testAPIT() {
+function testAPI() {
 	var urlString = 'https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=' + new Date().toISOString() + '&maxResults=7&singleEvents=true&orderBy=startTime';
 	$.ajax({
 		url: urlString,
 		type: "GET",
 		dataType: "json",
 		success: function(response) {
-			document.getElementById("test1").innerHTML = response.toString();
+			var x = response['items'];
+			var vals = [];
+			for (i in x) {
+				vals.push(i.toString());
+			}
+
+			document.getElementById("test1").innerHTML = vals.join("\n");
 		}
 	});
 }
