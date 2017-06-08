@@ -110,7 +110,10 @@ function testAPI() {
 					console.log('Matches');
 				}
 			}
-			document.getElementById("test1").innerHTML = vals.join("\n");
+			//document.getElementById("test1").innerHTML = vals.join("\n");
+			console.log(vals.join("\n"));
+			var suffixUrl = window.location.href.split('/').pop();
+			console.log(suffixUrl);
 		}
 	});
 }
