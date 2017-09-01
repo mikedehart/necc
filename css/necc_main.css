@@ -10,6 +10,10 @@ h3#event_title {
 	text-align: center;
 }
 
+h4, h2, h3 {
+  color: #522D80;
+}
+
 
 
 /* HEADER
@@ -208,6 +212,23 @@ header {
 }
 
 */
+
+/* For Academics Page
+===================== */
+
+#event_pics {
+  margin-left: 10px;
+}
+
+
+/* For photo gallery
+==================== */
+
+.sidepic {
+  width: 300px;
+  height: 200px;
+}
+
 
 /* MISC FIXES
 ================== */
