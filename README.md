@@ -1,5 +1,5 @@
 ##
-## New England Clemson Club site website
+## New England Clemson Club website
 
 Alumni Website for New England Clemson Club.
 URL: neclemsonclub.com, www.neclemsonclub.com
