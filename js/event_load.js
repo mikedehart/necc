@@ -1,82 +1,21 @@
-function getCal () {
-	var urlString = 'https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=' + new Date().toISOString() + '&maxResults=7&singleEvents=true&orderBy=startTime';
-	var currPage = window.location.href.split('/').pop();
-	$.ajax({
-		url: urlString,
-		type: "GET",
-		dataType: "json",
-		success: function(response) {
-			processEvents(response);
-		}
-	});
-}
 
-function processEvents(response) {
-	var x = response['items'];
-	var monthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-	var allEvents = [];
-	for (i in x) {
-		var loc = x[i]['location'];	// Event Location
-		var singleEvent = [];	// This is filled and pushed to allEvents array
-		var startDate = x[i]['start']['dateTime'];	// Start date/time of the event
-		var endDate = x[i]['end']['dateTime'];	// End date/time of the event
-		var mnth = monthAbbr[getEventMonth(startDate) - 1];	// 3-char month using the numeric value for index.
-		var day = getEventDay(startDate); // Calendar day of the event
-		var htmlLink = x[i]['htmlLink'];	// HTML link to the event in Google cal.
-		var locLink = ["https://www.google.com/maps/search", loc.replace(/ /g, "+")];
-		var eventTime = [getEventTime(startDate), "to", getEventTime(endDate)].join(" "); // String for total event time i.e. "10:00 to 12:00"
-		var description = x[i]['description']; // Description field for details on event
-		var title = x[i]['summary']; // Event title
-	
-		singleEvent.push(
-				"<li>",
-				"<div class=\"main-event\">",
-				"<div class=\"main-event-date\">",
-				"<span class=\"month\">",
-				mnth,
-				"</span>",
-				"<span class=\"day\">",
-				day,
-				"</span>",
-				"</div>",
-				"<aside>",
-				"<p class=\"main-event-title\"><a href=\"",
-				htmlLink,
-				"\">",
-				title,
-				"</a></p>",
-				"<p class=\"main-event-time\">",
-				eventTime,
-				"</p>",
-				"<p class=\"main-event-location\"><a href=\"",
-				locLink.join('/'),
-				"\">",
-				loc,
-				"</a></p>",
-				"</aside>",
-				"<p class=\"main-event-desc\">",
-				description,
-				"</p>",
-				"</div>",
-				"</li>"
-			);
 
-		allEvents.push(singleEvent.join(""));
-	}
-	
-	document.getElementById("event_list").innerHTML = allEvents.join("\n");
-	//$("#eventCol").html(allEvents.join("\n"));
-}
 
-function getEventMonth(fullDate) {
-	// slices the month from time
-	return parseInt(fullDate.slice(5,7));
-}
+/*
+	These are hacks for validating values from the Google API. Reason:
+		- start end dates return: obj.start.date if no time is set
+								  obj.start.dateTime if a date is set
 
-function getEventDay(fullDate) {
-	// slices the day from time
-	return parseInt(fullDate.slice(8,10));
-}
+	  	- location is not present if it is left off of the event
+
+	  	By default these will return 'N/A' if not applicable for now.
+*/
+
+// Return val if defined, otherwise return passed in default value or 'N/A'
+function validateValue(val, defVal="N/A") {return ((typeof(val) !== 'undefined') ? val : defVal)}
+
+// Choose either date or dateTime
+function chooseDate(date, dateTime) {return ((typeof(date) !== 'undefined') ? date : dateTime)}
 
 function getEventTime(fullDate) {
 	// Slices time and converts to am/pm;
@@ -88,11 +27,89 @@ function getEventTime(fullDate) {
 	return (hr + rest + suffix);
 }
 
+function stringifyTime(startTime, endTime) {
+	let start = ((startTime.length > 10) ? getEventTime(startTime) : '?'); 
+	let end = ((endTime.length > 10) ? getEventTime(endTime) : '?');
+
+	return `${start} to ${end}`;
+}
+
+
+function getCal () {
+	let urlString = 'https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=' + new Date().toISOString() + '&maxResults=7&singleEvents=true&orderBy=startTime';
+	let currPage = window.location.href.split('/').pop();
+	$.ajax({
+		url: urlString,
+		type: "GET",
+		dataType: "json",
+		success: function(response) {
+			processEvents(response);
+		}
+	});
+}
+
+function processEvents(res) {
+	let events = res.items;
+	let monthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	let allEvents = [];
+
+		events.map((e) => {
+			
+			let cLoc = validateValue(e.location);
+			let cStart = chooseDate(e.start.date, e.start.dateTime);
+			let cEnd = chooseDate(e.end.date, e.end.dateTime);
+
+			let cMonth = ((cStart) => { return parseInt(cStart.slice(5,7)) })(cStart);
+			let cDay = ((this.cStart) => { return parseInt(cStart.slice(8,10)) })(cStart);
+			let cTime = stringifyTime(cStart, cEnd);
+			let cLLink = (() => { return ((cLoc !== "N/A") ? ["https://www.google.com/maps/search", cLoc.replace(/ /g, "+")].join('/') : '#')})(cLoc);
+			let cELink = e.htmlLink;
+
+			let currentEvent = [
+				"<li>",
+				"<div class=\"main-event\">",
+				"<div class=\"main-event-date\">",
+				"<span class=\"month\">",
+				cMonth,
+				"</span>",
+				"<span class=\"day\">",
+				cDay,
+				"</span>",
+				"</div>",
+				"<aside>",
+				"<p class=\"main-event-title\"><a href=\"",
+				cELink,
+				"\">",
+				validateValue(e.summary),
+				"</a></p>",
+				"<p class=\"main-event-time\">",
+				cTime,
+				"</p>",
+				"<p class=\"main-event-location\"><a href=\"",
+				cLLink,
+				"\">",
+				cLoc,
+				"</a></p>",
+				"</aside>",
+				"<p class=\"main-event-desc\">",
+				validateValue(e.description),
+				"</p>",
+				"</div>",
+				"</li>"
+			];
+		
+			allEvents.push(currentEvent.join(""));
+		})
+
+
+
+	return allEvents;
+}
 
 /**
 	TEST FUNCTION 
 
-*/
+
 
 function testAPI() {
 	var urlString = 'https://www.googleapis.com/calendar/v3/calendars/odfj419lp01ad8bsgp78d4dh8k@group.calendar.google.com/events?key=AIzaSyCc8FP8nhI-HXrxQnJ6-9_v6GsaD_rPXr4&timeMin=' + new Date().toISOString() + '&maxResults=7&singleEvents=true&orderBy=startTime';
@@ -117,3 +134,5 @@ function testAPI() {
 		}
 	});
 }
+
+*/
