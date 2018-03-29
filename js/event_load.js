@@ -60,7 +60,7 @@ function processEvents(res) {
 			let cEnd = chooseDate(e.end.date, e.end.dateTime);
 
 			let cMonth = ((cStart) => { return parseInt(cStart.slice(5,7)) })(cStart);
-			let cDay = ((this.cStart) => { return parseInt(cStart.slice(8,10)) })(cStart);
+			let cDay = ((cStart) => { return parseInt(cStart.slice(8,10)) })(cStart);
 			let cTime = stringifyTime(cStart, cEnd);
 			let cLLink = (() => { return ((cLoc !== "N/A") ? ["https://www.google.com/maps/search", cLoc.replace(/ /g, "+")].join('/') : '#')})(cLoc);
 			let cELink = e.htmlLink;
@@ -100,8 +100,6 @@ function processEvents(res) {
 		
 			allEvents.push(currentEvent.join(""));
 		})
-
-
 
 	return allEvents;
 }
