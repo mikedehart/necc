@@ -28,10 +28,10 @@ function getEventTime(fullDate) {
 }
 
 function stringifyTime(startTime, endTime) {
-	let start = ((startTime.length > 10) ? getEventTime(startTime) : '?'); 
-	let end = ((endTime.length > 10) ? getEventTime(endTime) : '?');
+	let start = ((startTime.length > 10) ? getEventTime(startTime) : ''); 
+	let end = ((endTime.length > 10) ? getEventTime(endTime) : '');
 
-	return `${start} to ${end}`;
+	return (start === '' || end === '') ? '' : `${start} to ${end}` ;
 }
 
 
