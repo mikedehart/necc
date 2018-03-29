@@ -101,7 +101,7 @@ function processEvents(res) {
 			allEvents.push(currentEvent.join(""));
 		})
 
-	return allEvents;
+	document.getElementById("event_list").innerHTML = allEvents.join("\n");
 }
 
 /**
