@@ -59,7 +59,7 @@ function processEvents(res) {
 			let cStart = chooseDate(e.start.date, e.start.dateTime);
 			let cEnd = chooseDate(e.end.date, e.end.dateTime);
 
-			let cMonth = ((cStart) => { return parseInt(cStart.slice(5,7)) })(cStart);
+			let cMonth = monthAbbr[((cStart) => { return parseInt(cStart.slice(5,7)) })(cStart) - 1];
 			let cDay = ((cStart) => { return parseInt(cStart.slice(8,10)) })(cStart);
 			let cTime = stringifyTime(cStart, cEnd);
 			let cLLink = (() => { return ((cLoc !== "N/A") ? ["https://www.google.com/maps/search", cLoc.replace(/ /g, "+")].join('/') : '#')})(cLoc);
