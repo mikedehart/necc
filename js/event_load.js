@@ -1,6 +1,3 @@
-
-
-
 /*
 	These are hacks for validating values from the Google API. Reason:
 		- start end dates return: obj.start.date if no time is set
